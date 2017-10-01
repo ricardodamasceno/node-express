@@ -1,0 +1,21 @@
+{
+  "name": "node-express",
+  "description": "Front-End application developed with Node,Express and Gulp.",
+  "main": "app.js",
+  "authors": [
+    "Ricardo Damasceno"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ricardodamasceno/node-express",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
