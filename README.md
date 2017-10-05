@@ -1,7 +1,7 @@
 # node-express
 This is a Front-End application developed with Node,Express and Gulp.
 
-* Install all the necessary dependencies, type the following commands.
+* Install all the necessary dependencies typing the following commands.
 
     * **NPM Dependencies:** npm install
     * **Bower Dependencies:** bower install
