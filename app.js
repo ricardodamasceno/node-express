@@ -9,11 +9,11 @@ var port = 5000;
 app.use(express.static('public'));
 app.use(express.static('src/views'));
 
-app.get('/',function(req,res){
+app.get('/', function (req, res) {
     res.send('Hello World');
 });
 
 //Sets the port the application will listen
-app.listen(port, function(error){
+app.listen(port, function (error) {
     console.log('Server running on port ', port);
 });
