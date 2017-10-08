@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 
 //Number of the port
-var port = 5000;
+var port = process.env.PORT || 5000;
 
 //Loads all static files inside the directory
 app.use(express.static('public'));
