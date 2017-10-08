@@ -4,12 +4,13 @@
   "description": "Front-End application developed with Node,Express and Gulp.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "gulp serve"
   },
   "author": "Ricardo Damasceno",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
