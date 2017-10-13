@@ -6,8 +6,13 @@ var app = express();
 //Number of the port
 var port = process.env.PORT || 5000;
 
+var nav =  [
+    {link: 'Books', text: 'Books'},
+    {link: 'Authors', text: 'Authors'}
+];
+
 //Routes
-var bookRouter = require('./src/routes/bookRouter');
+var bookRouter = require('./src/routes/bookRouter')(nav);
 
 //Sets the routes paths
 app.use('/books', bookRouter);
