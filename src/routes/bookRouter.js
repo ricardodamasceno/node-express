@@ -1,8 +1,8 @@
 var express = require('express');
-
 var bookRouter = express.Router();
+var mysql = require('mysql');
 
-var router = function(nav) {
+var router = function (nav) {
 
     var books = [
         {
@@ -34,6 +34,19 @@ var router = function(nav) {
 
     bookRouter.route('/')
         .get(function (req, res) {
+
+            var connection = mysql.createConnection({
+                host     : 'localhost',
+                user     : 'root',
+                password : 'root',
+                database : 'books'
+            });
+
+            connection.query('SELECT * FROM books', function (error, results, fields) {
+                if (error) throw error;
+                console.log('Result :', results);
+            });
+
             res.render('booksListView', {
                 title: 'Books',
                 nav: nav,
