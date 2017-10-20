@@ -5,21 +5,9 @@ var app = express();
 //Number of the port
 var port = process.env.PORT || 5000;
 
-//MySQL
-var mysql = require('mysql');
-
-var connection = mysql.createConnection({
-    host     : 'localhost',
-    user     : 'root',
-    password : 'root',
-    database : 'books'
-});
-
-connection.connect();
-
 var nav = [
-    {link: 'Books', text: 'Books'},
-    {link: 'Authors', text: 'Authors'}
+    {link: 'books', text: 'Books'},
+    {link: 'authors', text: 'Authors'}
 ];
 
 //Routes
@@ -40,8 +28,8 @@ app.get('/', function (req, res) {
     res.render('index', {
         title: 'Hello from render',
         nav: [
-            {link: 'Books', text: 'Books'},
-            {link: 'Authors', text: 'Authors'}
+            {link: 'books', text: 'Books'},
+            {link: 'authors', text: 'Authors'}
         ]
     });
 });
