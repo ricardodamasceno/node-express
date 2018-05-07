@@ -1,0 +1,10 @@
+version: '2'
+services:
+  node-express:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: .
+    image: ricardodpaiva/node-express
+    container_name: node-express
+    ports:
+      - "80:5000"
